@@ -1,3 +1,6 @@
+source /root/.local/share/pipx/venvs/conan/bin/activate
+conan profile detect
+mkdir build
 conan install . --build missing -pr:b=default -pr:h=./profiles/raspberrypi_zero_2w
 cd build
 source Release/generators/conanbuild.sh
